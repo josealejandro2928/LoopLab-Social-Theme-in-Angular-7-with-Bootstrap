@@ -4,12 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     loadChildren: './frontend/frontend.module#FrontendModule'
   },
   {
     path: '**',
-    redirectTo: 'home'
+    redirectTo: ''
   }
 ];
 

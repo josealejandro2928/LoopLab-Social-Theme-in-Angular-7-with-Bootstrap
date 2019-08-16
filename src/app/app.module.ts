@@ -12,7 +12,7 @@ import { AppShareModule } from 'src/app/app-share/app-share.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AppShareModule,
+    AppShareModule
   ],
   providers: [],
   bootstrap: [AppComponent]

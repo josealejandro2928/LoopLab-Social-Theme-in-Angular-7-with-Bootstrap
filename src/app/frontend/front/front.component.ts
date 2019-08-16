@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FrontComponent implements OnInit {
 
   isNavbarCollapsed = true;
+  delponeImageUrl = '../../../assets/background/accounts.jpg';
 
   constructor() {
 

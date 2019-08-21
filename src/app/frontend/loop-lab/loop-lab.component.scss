@@ -1,0 +1,79 @@
+$bg-color:#333;
+$font-color:#fff;
+$primary-color:#008ed6;
+$dark-overlay:rgba(0, 0, 0, 0.7);
+
+#FrontContent {
+  background: $bg-color !important;
+  color: $font-color !important;
+
+  .navbar-transparent {
+    border-bottom: $primary-color 2px solid !important;
+    opacity: 0.8;
+  }
+
+  .navbar-filled {
+    border-bottom: $primary-color 2px solid !important;
+  }
+
+  #home-section {
+    background: url('../../../assets/background/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 700px;
+
+    .dark-overlay {
+      background-color: $dark-overlay;
+      position: initial;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 778px;
+
+    }
+
+    .home-inner {
+      padding-top: 100px;
+    }
+
+    .card-form {
+      opacity: 0.95;
+    }
+
+    .fa {
+      color: $primary-color;
+      background: #fff;
+      border-radius: 4px;
+      padding: 4px;
+      font-size: 24px;
+    }
+  }
+
+  #create-section {
+    .fa {
+      color: $primary-color;
+      background: #fff;
+      border-radius: 4px;
+      padding: 4px;
+      font-size: 24px;
+    }
+
+  }
+
+  .MyLinks {
+    font-size: 17px !important;
+    color: #fff !important;
+
+    &:hover {
+      color: $primary-color !important;
+      text-decoration: none !important;
+    }
+
+    &:active {
+      color: $primary-color !important;
+      text-decoration: none !important;
+    }
+  }
+
+
+}

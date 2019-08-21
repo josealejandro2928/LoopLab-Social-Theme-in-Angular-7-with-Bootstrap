@@ -1,24 +1,21 @@
-import { HomeComponent } from './home/home.component';
+import { MizuxeBookComponent } from './mizuxe-book/mizuxe-book.component';
 import { Page1Component } from './page1/page1.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FrontComponent } from './front/front.component';
+import { LoopLabComponent } from './loop-lab/loop-lab.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: FrontComponent,
-    children: [
-      {
-        path: '',
-        component: HomeComponent
-      },
-      {
-        path: 'page1',
-        component: Page1Component
-      },
-
-    ]
+    component: LoopLabComponent,
+  },
+  {
+    path: 'mizuxe-book',
+    component: MizuxeBookComponent
+  },
+  {
+    path: 'page1',
+    component: Page1Component
   },
   {
     path: '**',

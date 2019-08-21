@@ -1,20 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-$bg-color:#333;
-$font-color:#fff;
-$primary-color:#008ed6;
-$dark-overlay:rgba(0, 0, 0, 0.7);
-
-body {
-  background: $bg-color !important;
-  color: $font-color !important;
-}
-
-.navbar {
-  border-bottom: $primary-color 2px solid !important;
-  opacity: 0.8 !important
-}
-
 
 ::-webkit-scrollbar {
   width: 10px;

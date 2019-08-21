@@ -1,0 +1,444 @@
+<div id="FrontContent">
+  <div class="bg-dark text-light p-4" style="min-height: 64px;">
+    <div class="row justify-content-center text-center">
+      <span class="align-middle h5">Este es un proyecto de Frontpage desarrollado por Jose Alejandro usando Bootstrap4 y
+        Angular7</span>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-dark navbar-expand-md sticky-top" [ngClass]="{'navbar-transparent':this.navBarState=='normal','navbar-filled':this.navBarState=='downNav',
+      'bg-dark':this.navBarState=='normal','bg-primary':this.navBarState=='downNav' }">
+    <div class="container-fluid">
+      <span class="navbar-brand text-primary">
+        <img src="../../../assets/logos/Boostrap_logo.svg" class="ml-2" height="50" class="d-inline-block align-center"
+          alt="">
+        <span class="align-center align-middle ml-2 text-light h2">
+          LoopLAB
+        </span>
+
+      </span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+        (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+        <ul class="navbar-nav ml-auto ">
+          <li class="nav-item">
+            <a class="nav-link btn mr-2" style="font-size: 17px !important" [ngClass]="{'btn-dark':this.navBarState=='normal','btn-primary':this.navBarState =='downNav',
+                  'text-light':this.navBarState=='downNav'}" href="#home-section">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn mr-2" style="font-size: 17px !important" [ngClass]="{'btn-dark':this.navBarState=='normal','btn-primary':this.navBarState =='downNav',
+                  'text-light':this.navBarState=='downNav'}" href="#explore-head-section">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a href="#create-head-section" class="nav-link btn mr-2" style="font-size: 17px !important" [ngClass]="{'btn-dark':this.navBarState=='normal','btn-primary':this.navBarState =='downNav',
+                  'text-light':this.navBarState=='downNav'}">Create</a>
+          </li>
+          <li class="nav-item">
+            <a href="#share-head-section" class="nav-link btn mr-2" style="font-size: 17px !important" [ngClass]="{'btn-dark':this.navBarState=='normal','btn-primary':this.navBarState =='downNav',
+                  'text-light':this.navBarState=='downNav'}">Share</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" fxFlex.xs="100" fxFlex.sm="100" type="search" placeholder="Search"
+            aria-label="Search">
+          <button fxFlex.xs="100" class="btn btn-outline-light my-2 my-sm-2 text-light" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <div style="padding-top:78px !important;">
+        <router-outlet></router-outlet>
+      </div> -->
+
+  <!-- HOME SECTION -->
+  <section id="home-section">
+    <div class="dark-overlay">
+      <div class="home-inner">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 d-none d-lg-block">
+              <h1 class="display-4">
+                Build <strong>social profiles </strong> ang gain revenue and <strong>profits</strong>
+              </h1>
+              <div class="d-flex flex-row">
+
+                <div class="p-4 align-self-start">
+                  <img src="../../../assets/icons/check-rounded.svg" height="40" class="fa fa-check">
+                </div>
+                <div class="p-4 align-self-start">
+                  Los medios de comunicación sociales o simplemente medios sociales1​ (social media en inglés) son
+                  plataformas de comunicación en línea donde el contenido es creado por los propios usuarios mediante el
+                  uso de las tecnologías de la Web 2.0, que facilitan la edición, la publicación y el intercambio de
+                  información.
+                </div>
+              </div>
+              <div class="d-flex flex-row">
+
+                <div class="p-4 align-self-start">
+                  <img src="../../../assets/icons/check-rounded.svg" height="40" class="fa fa-check">
+                </div>
+                <div class="p-4 align-self-start">
+                  optimización de medios sociales, conocido en inglés como SMO o social media optimization, es un
+                  término
+                  de marketing que hace referencia a la estrategia y conjunto de acciones1​ llevadas a cabo en redes
+                  sociales y comunidades online con una finalidad publicitaria o comercial.
+                </div>
+              </div>
+              <div class="d-flex flex-row">
+
+                <div class="p-4 align-self-start">
+                  <img src="../../../assets/icons/check-rounded.svg" height="40" class="fa fa-check">
+                </div>
+                <div class="p-4 align-self-start">
+                  La responsabilidad de los Medios de comunicación e información su origen en la llamada Teoría de la
+                  Responsabilidad de los medios de comunicación de la Prensa, planteada en 1947 a raíz del (Informe
+                  Hutchins/ en la Universidad de Chicago.
+                </div>
+              </div>
+
+            </div>
+            <div class="col-lg-4">
+              <div class="card bg-primary text-center card-form">
+                <div class="card-body">
+                  <h3>Sign Up Today</h3>
+                  <p>Please fill out of this form to register </p>
+                  <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-lg" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control form-control-lg" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control form-control-lg" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control form-control-lg" placeholder="Confirm Password">
+                    </div>
+                    <button type="submit" class="btn btn-outline-light btn-block">Submit</button>
+                  </form>
+                </div>
+
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- EXPLORE HEADER SECTION -->
+  <section id="explore-head-section">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <div class="py-4">
+            <h1 class="display-4">Explore</h1>
+            <p class="lead">
+              La optimización de medios sociales, conocido en inglés como SMO o social media optimization, es un término
+              de marketing que hace referencia a la estrategia y conjunto de acciones1​ llevadas a cabo en redes
+              sociales
+              y comunidades online con una finalidad publicitaria o comercial.
+            </p>
+            <a href="#" class="btn btn-outline-light">Find Out More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPLORE SECTION -->
+  <section id="explore-section" class="bg-light text-muted py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="../../../assets/background/accounts.jpg" alt="" class="img-fluid mb-3 rounded-circle">
+        </div>
+        <div class="col-md-6">
+          <h3>Explore & Connect</h3>
+          <p>Un grupo de aplicaciones basadas en Internet que se desarrollan sobre los fundamentos ideológicos y
+            tecnológicos de la Web 2.0, y que permiten la creación y el intercambio de contenidos generados por el
+            usuario</p>
+          <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx">
+            <div fxLayoutAlign="start start">
+
+              <div fxLayoutAlign="start start" class="p-2 py-5">
+                <img src="../../../assets/icons/check.png" height="20" class="fa fa-check">
+              </div>
+              <div fxLayoutAlign="start start" class="p-4">
+                Optimización de medios sociales, conocido en inglés como SMO o social media optimization, es un término
+                de marketing que hace referencia.
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row">
+            <div fxLayoutAlign="start start" class="p-2 py-5">
+              <img src="../../../assets/icons/check.png" height="20" class="fa fa-check">
+            </div>
+            <div class="p-4 align-self-start">
+              Optimización de medios sociales, conocido en inglés como SMO o social media optimization, es un término
+              de marketing que hace referencia a la estrategia.
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CREATE HEADER SECTION -->
+  <section id="create-head-section" class="bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <div class="py-4">
+            <h1 class="display-4">Create</h1>
+            <p class="lead">
+              La optimización de medios sociales, conocido en inglés como SMO o social media optimization, es un término
+              de marketing que hace referencia a la estrategia y conjunto de acciones1​ llevadas a cabo en redes
+              sociales
+              y comunidades online con una finalidad publicitaria o comercial.
+            </p>
+            <a href="#" class="btn btn-outline-light">Find Out More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CREATE SECTION -->
+  <section id="create-section" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Create your passion</h3>
+          <p>Un grupo de aplicaciones basadas en Internet que se desarrollan sobre los fundamentos ideológicos y
+            tecnológicos de la Web 2.0, y que permiten la creación y el intercambio de contenidos generados por el
+            usuario</p>
+          <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx">
+            <div fxLayoutAlign="start start">
+
+              <div fxLayoutAlign="start start" class="p-2 py-5">
+                <img src="../../../assets/icons/check-rounded.svg" height="30" class="fa fa-check">
+              </div>
+              <div fxLayoutAlign="start start" class="p-4">
+                Optimización de medios sociales, conocido en inglés como SMO o social media optimization, es un término
+                de marketing que hace referencia.
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row">
+            <div fxLayoutAlign="start start" class="p-2 py-5">
+              <img src="../../../assets/icons/check-rounded.svg" height="30" class="fa fa-check">
+            </div>
+            <div class="p-4 align-self-start">
+              Optimización de medios sociales, conocido en inglés como SMO o social media optimization, es un término
+              de marketing que hace referencia a la estrategia.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="../../../assets/background/programing.jpg" alt="" class="img-fluid mb-3 rounded-circle">
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SHARE HEADER SECTION -->
+  <section id="share-head-section" class="bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <div class="py-4">
+            <h1 class="display-4">Share</h1>
+            <p class="lead">
+              La optimización de medios sociales, conocido en inglés como SMO o social media optimization, es un término
+              de marketing que hace referencia a la estrategia y conjunto de acciones1​ llevadas a cabo en redes
+              sociales
+              y comunidades online con una finalidad publicitaria o comercial.
+            </p>
+            <a href="#" class="btn btn-outline-light">Find Out More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- SHARE SECTION -->
+  <section id="share-section" class="bg-light text-muted py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="../../../assets/background/colaboraion.jpg" alt="" class="img-fluid mb-3 rounded-circle">
+        </div>
+        <div class="col-md-6">
+          <h3>Share your create</h3>
+          <p>Un grupo de aplicaciones basadas en Internet que se desarrollan sobre los fundamentos ideológicos y
+            tecnológicos de la Web 2.0, y que permiten la creación y el intercambio de contenidos generados por el
+            usuario</p>
+          <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx">
+            <div fxLayoutAlign="start start">
+
+              <div fxLayoutAlign="start start" class="p-2 py-5">
+                <img src="../../../assets/icons/check.png" height="30" class="fa fa-check">
+              </div>
+              <div fxLayoutAlign="start start" class="p-4">
+                Optimización de medios sociales, conocido en inglés como SMO o social media optimization, es un término
+                de marketing que hace referencia.
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row">
+            <div fxLayoutAlign="start start" class="p-2 py-5">
+              <img src="../../../assets/icons/check.png" height="30" class="fa fa-check">
+            </div>
+            <div class="p-4 align-self-start">
+              Optimización de medios sociales, conocido en inglés como SMO o social media optimization, es un término
+              de marketing que hace referencia a la estrategia.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER SECTION -->
+  <footer id="main-footer" class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center py-4">
+          <h1 class="h2">LoopLab</h1>
+          <p>Copyright &copy; 2018</p>
+          <button class="btn btn-primary" type="button" (click)="openModalContactUs(contentModel)">Contact Us</button>
+        </div>
+      </div>
+      <!-- -----MODAL--------------------------------- -->
+      <ng-template #contentModel let-modal>
+        <div class="modal-header text-dark">
+          <h4 class="modal-title" id="modal-basic-title">Contact Us</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.close(false)">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-dark">
+          <form [formGroup]="this.ContactUsForm">
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" [formControl]="this.ContactUsForm.controls['name']" class="form-control" [ngClass]="{'is-invalid': this.ContactUsForm.controls['name'].invalid,
+                    'is-valid':this.ContactUsForm.controls['name'].valid}">
+              <div *ngIf="this.ContactUsForm.controls['name'].hasError('required')" class="invalid-feedback">
+                This field is required
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control " [formControl]="this.ContactUsForm.controls['email']" [ngClass]="{'is-invalid': this.ContactUsForm.controls['email'].invalid,
+                    'is-valid':this.ContactUsForm.controls['email'].valid}">
+              <div *ngIf="this.ContactUsForm.controls['email'].hasError('required')" class="invalid-feedback">
+                This field is required
+              </div>
+              <div *ngIf="this.ContactUsForm.controls['email'].hasError('email')" class="invalid-feedback">
+                This must be a valid email address
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <input type="text" class="form-control " [formControl]="this.ContactUsForm.controls['message']" [ngClass]="{'is-invalid': this.ContactUsForm.controls['message'].invalid,
+                    'is-valid':this.ContactUsForm.controls['message'].valid}">
+              <div *ngIf="this.ContactUsForm.controls['message'].hasError('required')" class="invalid-feedback">
+                This field is required
+              </div>
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-block" [disabled]="this.ContactUsForm.invalid"
+            (click)="modal.close(true)">Save</button>
+        </div>
+      </ng-template>
+      <!-- --------------------------------------------- -->
+      <div class="row justify-content-center">
+        <div class="col-sm-3 text-left py-4 ">
+          <h1 class="h3">LoopLab Course</h1>
+          <ul class="list-unstyled">
+            <li class="py-1">
+              <a class="text-primary MyLinks" href="#home-section">LoopLab</a>
+            </li>
+            <li class="py-1">
+              <a class="text-primary MyLinks" [routerLink]="['/mizuxe-book']">
+                Mizuxe Book Theme</a>
+            </li>
+            <li class="py-1">
+              <a class="text-primary MyLinks" href="#!">Solutions</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-sm-3 text-left py-4">
+          <h1 class="h3">Resources</h1>
+          <ul class="list-unstyled">
+            <li class="py-1">
+              <a class="text-primary MyLinks" href="#!">All resources</a>
+            </li>
+            <li class="py-1">
+              <a class="text-primary MyLinks" href="#!">Blog</a>
+            </li>
+            <li class="py-1">
+              <a class="text-primary MyLinks" href="#!">Newsletter</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-3 text-left py-4">
+          <h1 class="h3">Community</h1>
+          <ul class="list-unstyled">
+            <li class="py-1">
+              <a class="text-primary MyLinks" href="#!">Customers</a>
+            </li>
+            <li class="py-1">
+              <a class="text-primary MyLinks" href="#!">Contribute</a>
+            </li>
+            <!-- <li>
+                  <a class="text-primary MyLinks" href="#!">Newsletter</a>
+                </li> -->
+          </ul>
+        </div>
+        <div class="col-sm-3 text-left py-4">
+          <h1 class="h3">Support</h1>
+          <ul class="list-unstyled">
+            <li class="py-1">
+              <a class="text-primary MyLinks" href="#!">Get help</a>
+            </li>
+            <li class="py-1">
+              <a class="text-primary MyLinks" href="#!">Contact Sales</a>
+            </li>
+            <!-- <li>
+                    <a class="text-primary MyLinks" href="#!">Newsletter</a>
+                  </li> -->
+          </ul>
+        </div>
+
+      </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6 text-center py-2">
+          <div>Powered by</div>
+          <div>Jose Alejandro Concepcion</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>

@@ -204,7 +204,7 @@
   </section>
 
   <!------MEET THE AUTORS------>
-  <section id="autors" class="py-4 text-center">
+  <section id="autors" class="py-4">
     <div class="container">
       <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
         <div class="col text-center" fxFlex="50">
@@ -218,10 +218,8 @@
       </div>
       <div class="row mt-3">
         <div *ngFor="let user of this.arrayUsers" class="col-lg-3 col-md-6 py-4">
-          <div class="card my-card">
+          <div class="card text-center">
             <div class="card-body">
-              <!-- <img [src]="user.image" style="height: 100px !important; width: auto !important"
-                class="rounded-circle mb-3"> -->
               <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
                 <div [style.background-image]="getSafeImage(user.image)" fxLayoutAlign="center center"
                   class="imgAvatar rounded-circle mb-3">

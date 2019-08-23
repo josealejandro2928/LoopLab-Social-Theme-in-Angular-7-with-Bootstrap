@@ -1,18 +1,19 @@
-import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit, OnDestroy, ViewEncapsulation, AfterViewInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { WOW } from 'wowjs/dist/wow.min';
 @Component({
   selector: 'app-loop-lab',
   templateUrl: './loop-lab.component.html',
   styleUrls: ['./loop-lab.component.scss']
 })
-export class LoopLabComponent implements OnInit, OnDestroy {
+export class LoopLabComponent implements OnInit, OnDestroy, AfterViewInit {
 
   isNavbarCollapsed = true;
   delponeImageUrl = '../../../assets/background/accounts.jpg';
   lastDisplacement: number = null;
   navBarState = 'normal';
+  wow = new WOW({ live: false });
 
   ContactUsForm: FormGroup;
   constructor(
@@ -31,9 +32,14 @@ export class LoopLabComponent implements OnInit, OnDestroy {
     window.addEventListener('scroll', this.scrollEvent, true);
   }
 
+  ngAfterViewInit() {
+    this.wow.init();
+  }
+
   ngOnDestroy() {
     window.removeEventListener('scroll', this.scrollEvent, true);
   }
+
 
   /////// Event Scrol Handle //////
 

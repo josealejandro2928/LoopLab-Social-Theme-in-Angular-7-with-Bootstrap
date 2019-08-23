@@ -41,11 +41,27 @@
                   'text-light':this.navBarState=='downNav'}">Share</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+
+        <!-- <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" fxFlex.xs="100" fxFlex.sm="100" type="search" placeholder="Search"
             aria-label="Search">
           <button fxFlex.xs="100" class="btn btn-outline-light my-2 my-sm-2 text-light" type="submit">Buscar</button>
-        </form>
+        </form> -->
+
+        <div class="input-group" style="max-width: 500px !important;">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+          <input class="form-control" type="text" name="" placeholder="Search for..." aria-label="Search ">
+          <span class="input-group-btn">
+            <button class="btn border-light" type="submit"
+              [ngClass]="{'btn-dark':this.navBarState=='normal','btn-primary':this.navBarState =='downNav'}">Search</button>
+          </span>
+        </div>
+
+
       </div>
     </div>
   </nav>

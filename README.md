@@ -1,6 +1,9 @@
 # LoopLapSocialTheme
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
+There is a Udemy Course called Bootstrap 4 from scratch with 5 projects. Here you can find the course projects but implemented with the use of the Angular Framework.
+Bootstrap is added to the project, the wow.js and animate.ccs library are used to give effect to the page.
+
+This is the first one called LoopLab Social Theme
 
 ## Development server
 

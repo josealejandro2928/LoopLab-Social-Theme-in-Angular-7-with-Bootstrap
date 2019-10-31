@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-
+import { WOW } from 'wowjs/dist/wow.min';
 @Component({
   selector: 'app-mizuxe-book',
   templateUrl: './mizuxe-book.component.html',
   styleUrls: ['./mizuxe-book.component.scss']
 })
-export class MizuxeBookComponent implements OnInit {
-
+export class MizuxeBookComponent implements OnInit, AfterViewInit {
+  wow = new WOW({ live: false });
   isNavbarCollapsed = true;
+  showEffectCard = false;
   arrayUsers: any[] = [
     {
       name: 'Susan Martin',
@@ -39,6 +40,10 @@ export class MizuxeBookComponent implements OnInit {
   constructor(public sanitizer: DomSanitizer) { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    this.wow.init();
   }
 
   getSafeImage(url: string) {
